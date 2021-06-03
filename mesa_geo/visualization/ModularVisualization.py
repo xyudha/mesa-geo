@@ -229,7 +229,7 @@ class ModularServer(tornado.web.Application):
     """ Main visualization application. """
     verbose = True
 
-    port = 8521  # Default port to listen on
+    port = 80  # Default port to listen on
     max_steps = 100000
 
     # Handlers and other globals:
@@ -316,7 +316,7 @@ class ModularServer(tornado.web.Application):
         """ Run the app. """
         if port is not None:
             self.port = port
-        url = 'http://127.0.0.1:{PORT}'.format(PORT=self.port)
+        url = 'http://34.101.95.111:{PORT}'.format(PORT=self.port)
         print('Interface starting at {url}'.format(url=url))
         self.listen(self.port)
         if open_browser:
